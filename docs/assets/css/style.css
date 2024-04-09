@@ -38,6 +38,14 @@ h2 {
 
 p {
     font-family: var(--text);
+    letter-spacing: 0.8px;
+}
+
+main section p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.9;
+    font-family: var(--sub-text);
 }
 
 @media screen and (min-width: 800px) {
