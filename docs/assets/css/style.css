@@ -1,0 +1,90 @@
+:root {
+    --title: avenirBlack;
+    --heading: avenirHeavy;
+    --text: avenirRegular;
+    --sub-text: avenirBook;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 10vw 1fr 10vw;
+    grid-template-rows: 5rem 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+footer {
+    display: grid;
+    grid-column: span 3;
+    grid-row: 1;
+    height: 100%;
+}
+
+main {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+h1 {
+    font-family: var(--title);
+}
+
+h2 {
+    font-family: var(--heading);
+}
+
+p {
+    font-family: var(--text);
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        /* 800-1920px | 32-48px */
+        font-size: clamp(2rem, 1.2857rem + 1.4286vw, 3rem);
+    }
+
+    h2 {
+        /* 800-1920px | 24-32px */
+        font-size: clamp(1.5rem, 1.1429rem + 0.7143vw, 2rem);
+    }
+
+    p {
+        /* 800-1920px | 20-24px */
+        font-size: clamp(1.25rem, 1.0714rem + 0.3571vw, 1.5rem); 
+    }
+
+    footer .navbar {  
+        background-color: grey;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        /* font-size: clamp(1.625rem, 1.4rem + 1.2vw, 2rem); */
+        /* 250-800px | 28-32px */
+        font-size: clamp(1.75rem, 1.6364rem + 0.7273vw, 2rem);
+    }
+
+    h2 {
+        /* 250-800px | 20-24px */
+        font-size: clamp(1.25rem, 1.1364rem + 0.7273vw, 1.5rem);
+        /* font-size: clamp(1.375rem, 1.15rem + 1.2vw, 1.75rem); */
+    }
+
+    p {
+        /* 250-800px | 16-20px */
+        font-size: clamp(1rem, 0.8864rem + 0.7273vw, 1.25rem);
+    }
+
+    footer .navbar {  
+        background-color: pink;
+    }
+}
+
+
+
+
+
