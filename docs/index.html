@@ -6,6 +6,7 @@
         <link href="./assets/css/style.css" rel="stylesheet">
         <link href="./assets/css/fonts.css" rel="stylesheet">
         <link href="./assets/css/scroll.css" rel="stylesheet">
+        <link href="./assets/css/navbar.css" rel="stylesheet">
         <link rel="icon" type="image/x-icon" href="./assets/pictures/icons/icon1-big.png">
         <title>HCD</title>
     </head>
@@ -20,6 +21,9 @@
             <p>Hieronder is een lap tekst dat als voorbeeld wordt gebruikt voor de kopieer/plak functie.</p>
 
             <h2>Voorbeeld</h2>
+            <button onclick="copySelection()">Copy</button>
+            <button onclick="pasteSelection()">Paste</button>
+            <p id="pastedText"></p>
             <section id="test">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec fringilla turpis, ac pharetra massa. Curabitur libero mi, facilisis blandit vestibulum sed, pulvinar sit amet ante. Maecenas interdum neque a tortor bibendum, eget commodo odio vestibulum. Morbi id varius massa. Vestibulum quis neque tellus. Aliquam non risus gravida, volutpat purus at, pellentesque libero. Cras suscipit gravida dolor. Duis ut velit consectetur sapien porta maximus mollis ac purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus molestie molestie turpis, ut viverra justo auctor eget. Pellentesque in ante eget urna placerat sodales quis ut sapien. Fusce a enim ut quam posuere venenatis at fermentum erat.</p>
 
@@ -31,14 +35,59 @@
                     
                 <p>Integer egestas imperdiet lectus, ut eleifend arcu congue ut. Sed bibendum pretium sapien. Nulla non pellentesque nisi. Cras id tempus elit. Sed sed dolor non ligula lacinia hendrerit ut sit amet sapien. Morbi maximus nunc et massa placerat auctor. Maecenas euismod pharetra euismod. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultrices turpis interdum, convallis est ac, placerat sapien. Mauris tempor venenatis nunc hendrerit feugiat.</p>  
             </section>
+            
         </main>
 
         <footer>
-            <div class="navbar">
+            <!--<div class="navbar">
                 <p>Hier komt een navigatiebalk met een clickable dropdown.</p>
-            </div>
-
+            </div>-->
+            <!-- <nav>
+                
+                <ul>
+                    <li onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1</a>
+                        <ul id="menuItem1">
+                            <li><a href="#">Menu Item 1</a></li>
+                            <li><a href="#">Menu Item 2</a></li>
+                            <li><a href="#">Menu Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2</a>
+                        <ul id="menuItem2">
+                            <li><a href="#">Menu Item 1</a></li>
+                            <li><a href="#">Menu Item 2</a></li>
+                            <li><a href="#">Menu Item 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button onclick="closeMenu()">Close</button>
+            </nav> -->
+            
+            <nav role="navigation" class="primary-navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1 &dtrif;</a>
+                        <ul id="menuItem1" class="dropdown">
+                            <li><a href="./example-1.html">Voorbeeld 1</a></li>
+                            <li><a href="./example-2.html">Voorbeeld 2</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2 &dtrif;</a>
+                        <ul id="menuItem2" class="dropdown">
+                            <li><a href="./example-3.html">Voorbeeld 3</a></li>
+                            <li><a href="./example-4.html">Voorbeeld 4</a></li>
+                            <li><a href="./example-5.html">Voorbeeld 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Menu Item 3</a></li>
+                    <li><a href="/">Menu Item 4</a></li>
+                </ul>
+                
+            </nav>
+            <!-- <button onclick="closeMenu()">Close</button> -->
             <script src="./assets/js/selection.js"></script>
+            <script src="./assets/js/dropdown.js"></script>
+            <script src="./assets/js/copy-paste.js"></script>
         </footer>
     </body>
 </html>

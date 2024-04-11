@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <link href="./assets/css/style.css" rel="stylesheet">
+        <link href="./assets/css/fonts.css" rel="stylesheet">
+        <link href="./assets/css/scroll.css" rel="stylesheet">
+        <link href="./assets/css/navbar.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="./assets/pictures/icons/icon1-big.png">
+        <title>HCD</title>
+    </head>
+    <body>
+        <header>
+
+        </header>
+
+        <main>
+            <h1>Prototype</h1>
+            <p>Dit is een webpagina dat dient als prototype voor de opdracht van het vak HCD, waarbij een technische oplossing wordt gerealiseerd voor mevrouw Besemer.</p>
+            <p>Hieronder is een lap tekst dat als voorbeeld wordt gebruikt voor de kopieer/plak functie.</p>
+
+            <h2>Voorbeeld 3</h2>
+            <button onClick="pasteSelection()">Paste</button>
+            <!-- <input type="text" id="pastedText"></input> -->
+            <textarea id="pastedText"></textarea>
+        </main>
+
+        <footer>
+            <!--<div class="navbar">
+                <p>Hier komt een navigatiebalk met een clickable dropdown.</p>
+            </div>-->
+            <!-- <nav>
+                
+                <ul>
+                    <li onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1</a>
+                        <ul id="menuItem1">
+                            <li><a href="#">Menu Item 1</a></li>
+                            <li><a href="#">Menu Item 2</a></li>
+                            <li><a href="#">Menu Item 3</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2</a>
+                        <ul id="menuItem2">
+                            <li><a href="#">Menu Item 1</a></li>
+                            <li><a href="#">Menu Item 2</a></li>
+                            <li><a href="#">Menu Item 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <button onclick="closeMenu()">Close</button>
+            </nav> -->
+            
+            <nav role="navigation" class="primary-navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1 &dtrif;</a>
+                        <ul id="menuItem1" class="dropdown">
+                            <li><a href="./example-1.html">Voorbeeld 1</a></li>
+                            <li><a href="./example-2.html">Voorbeeld 2</a></li>
+                        </ul>
+                    </li>
+                    <li onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2 &dtrif;</a>
+                        <ul id="menuItem2" class="dropdown">
+                            <li><a href="./example-3.html">Voorbeeld 3</a></li>
+                            <li><a href="./example-4.html">Voorbeeld 4</a></li>
+                            <li><a href="./example-5.html">Voorbeeld 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/">Menu Item 3</a></li>
+                    <li><a href="/">Menu Item 4</a></li>
+                </ul>
+                
+            </nav>
+            <!-- <button onclick="closeMenu()">Close</button> -->
+            <script src="./assets/js/copy-paste.js"></script>
+            <script src="./assets/js/dropdown.js"></script>
+        </footer>
+    </body>
+</html>

@@ -2,6 +2,8 @@
 let isSelecting = false;
 // Variables to store start and end nodes and offsets of selection
 let selectionStartNode, selectionEndNode, selectionStartOffset, selectionEndOffset;
+
+let selectedTextVar
 // Element representing the section on the page that should be selectable
 const sectionToSelect = document.getElementById('test');
 
@@ -37,6 +39,7 @@ sectionToSelect.addEventListener('click', function(event) {
                 selectText(selectionStartNode, selectionStartOffset, selectionEndNode, selectionEndOffset);
                 // Get the selected text as a string and log it
                 const selectedText = window.getSelection().toString();
+                selectedTextVar = selectedText
                 console.log('Selected text:', selectedText);
             }
         }
@@ -102,3 +105,6 @@ function selectText(startNode, startOffset, endNode, endOffset) {
     selection.removeAllRanges();
     selection.addRange(range);
 }
+
+
+

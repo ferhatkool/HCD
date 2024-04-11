@@ -48,6 +48,7 @@ main section p {
     font-family: var(--sub-text);
 }
 
+
 @media screen and (min-width: 800px) {
     h1 {
         /* 800-1920px | 32-48px */
@@ -60,6 +61,11 @@ main section p {
     }
 
     p {
+        /* 800-1920px | 20-24px */
+        font-size: clamp(1.25rem, 1.0714rem + 0.3571vw, 1.5rem); 
+    }
+
+    textarea {
         /* 800-1920px | 20-24px */
         font-size: clamp(1.25rem, 1.0714rem + 0.3571vw, 1.5rem); 
     }
@@ -87,6 +93,11 @@ main section p {
         font-size: clamp(1rem, 0.8864rem + 0.7273vw, 1.25rem);
     }
 
+    textarea {
+        /* 250-800px | 16-20px */
+        font-size: clamp(1rem, 0.8864rem + 0.7273vw, 1.25rem);        
+    }
+
     footer .navbar {  
         background-color: pink;
     }
@@ -95,4 +106,13 @@ main section p {
 
 
 
+textarea {
+    display: none;
+    field-sizing: content;
+    font-family: var(--sub-text);
+}
 
+button {
+    padding: 10px 10px 10px 10px;
+    margin-right: 10px;
+}

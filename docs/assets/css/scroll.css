@@ -3,7 +3,7 @@ main {
     }
     
 main::-webkit-scrollbar {
-    width: 5px;
+    width: 15px;
 }
       
 /* Track */
