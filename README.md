@@ -3,6 +3,26 @@
 ## CONCEPTEN
 
 ## PROTOTYPES
+### 11-04-2024
+Vandaag heb ik mijn eerste prototype laten zien aan mevrouw Besemer. Zij was erg tevreden over wat ik tot nu toe al heb gemaakt. De onderdelen die ik heb laten zien waren:
+
+- De navigatiebalk waarmee met een klik een dropdown kan worden geopend i.p.v. met een hover.
+- Het selecteren van tekst a.d.h.v. een begin en eindpunt.
+- De kopieer en plak knoppen op de hoofdpagina
+- Het navigeren naar een andere pagina om daar de tekst te plakken in een tekstveld dat nog bewerkt kan worden a.d.h.v. spraaksoftware.
+
+Ze was erg blij met hoe het selecteren van tekst werkt, omdat het per woord gaat en niet per karakter, wat voor haar onhandig is. Ze kan namelijk niet heel precies klikken. Daarom vond ze de grote knoppen ook fijn. Ook vond zij het lettertype een fijne grootte hebben, het was goed leesbaar. Een ander belangrijk punt was het kopiëren en plakken van tekst, wat ik a.d.h.v. twee knoppen heb gemaakt. Dit vond zij erg prettig werken. De genoemde punten waren naar wens gerealiseerd. 
+
+Het enige wat nog beter zou kunnen is het scrollen; ik heb met mevrouw getest of het voor haar mogelijk was om een slider in een scrollbar te gebruiken a.d.h.v. de tekentablet. Ik ben er hierdoor achtergekomen dat met haar instellingen het slepen van de cursor onmogelijk is, omdat de tekentablet constant klikt i.p.v. dragged. Het was voor haar wel mogelijk om in de scrollbar te klikken, maar dat vind ik zelf geen goede oplossing en dat lijkt me voor mevrouw ook onhandig. Voor het scroll ga ik twee knoppen maken waarmee door de pagina kan worden gescrolled.
+
+<img src="./readme-content/prototype-1-picture-1.png">
+
+<img src="./readme-content/prototype-1-picture-2.png">
+
+<img src="./readme-content/prototype-1-picture-3.png">
+
+<img src="./readme-content/prototype-1-picture-4.png">
+
 
 ## LOGS
 ### 09-04-2024
@@ -134,3 +154,16 @@ Teruggaand naar de event listener is te zien dat aan de functie dat hierboven om
 De functie voor het selecteren van een begin en eind positie werkt als volgt;
 
 Eerst wordt er een nieuwe document range aangemaakt, waaraan eerst de paragraaf van de 1e click en de start locatie in de paragraaf worden toegevoegd. Vervolgens zal dit ook gebeuren de paragraaf van de 2e click en de eind locatie in de paragraaf. Echter wordt hieraan nog een extra woord toegevoegd, namelijk het woord waarop is geklikt. De functie zal zonder deze toevoeging een selectie maken van het start woord en het woord voor het eind woord, wat niet de bedoeling is. Tenslotte zal de range worden ingesteld en zal dit in de eventlistener gebruikt worden om eenmaal een selectie te maken dat gekopieerd kan worden.
+
+### 10-04-2024
+Vandaag heb ik de functie voor het kopieren en plakken van tekst geïmplementeerd. Dit werkt a.d.h.v. twee knoppen; één voor het kopieren van een selectie en één voor het plakken van tekst in een van te voren aangewezen plek. 
+
+<img src="./readme-content/picture-3.png">
+
+Verder heb ik een navigatiebalk gemaakt met daarin twee dropdown menu’s die geopend kunnen worden door op de bijbehorende knop in de navigatiebalk te drukken. Ik heb de navigatiebalk toegevoegd, omdat ik vorige week oppikte dat mevrouw het niet fijn vond dat de website van de Gemeente Amsterdam een navigatiebalk had dat werkt op hover i.p.v. click. Zij kan alleen gebruik maken van clicks en niet van hover, dus om deze reden heb ik een navigatiebalk gemaakt dat werkt op basis van clicks om een dropdown menu te openen.
+
+<img src="./readme-content/picture-4.png">
+
+Tenslotte heb ik extra pagina’s toegevoegd als voorbeeld pagina’s. Dit zijn allemaal dezelfde pagina’s waarin een tekstveld te zien is met een plak knop daarboven. Het idee hierachter is dat mevrouw de tekst kan plakken en a.d.h.v. de spraaksoftware extra tekst kan toevoegen, zoals een kort berichtje. Het tekstveld kan ook worden beschouwd als een test functionaliteit om te laten zien dat de tekst ook op andere pagina’s kan worden geplakt. Het tekstveld schaalt mee met de inhoud.
+
+<img src="./readme-content/picture-5.png">
