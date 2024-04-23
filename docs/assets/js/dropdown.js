@@ -20,3 +20,25 @@ function closeMenu() {
         openedMenu.classList.remove("show")
     }
 }
+
+// Listen for focus event on li items
+const dropdownItems = document.querySelectorAll('.menuItemButton');
+dropdownItems.forEach(item => {
+    item.addEventListener('focus', (event) => {
+        const attribute = event.target.attributes[1].value.toString();
+        const character = attribute.charAt(14);
+        openMenuItem(character);
+    });
+});
+
+// Listen for keydown event on the last item of the dropdown menu
+const dropdownMenus = document.querySelectorAll('.dropdown');
+dropdownMenus.forEach(menu => {
+    const menuItems = menu.querySelectorAll('li');
+    const lastMenuItem = menuItems[menuItems.length - 1];
+    lastMenuItem.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab' && !event.shiftKey) {
+            closeMenu();
+        }
+    });
+});

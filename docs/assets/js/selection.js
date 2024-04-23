@@ -17,6 +17,7 @@ sectionToSelect.addEventListener('click', function(event) {
         const paragraph = target;
         // Retrieve the whole word of the selected position
         const { node: startNode, offset: startOffset } = getWordAtPosition(paragraph, event.clientX, event.clientY);
+        
         // If not in the middle of a selection
         if (!isSelecting) {
             // Store start position and indicate selection start
@@ -33,6 +34,7 @@ sectionToSelect.addEventListener('click', function(event) {
             isSelecting = false;
             // Log the end position
             console.log('Selection end:', selectionEndOffset);
+            
             // If both start and end positions are defined
             if (selectionStartNode && selectionEndNode) {
                 // Select the text between start and end positions
@@ -72,7 +74,23 @@ function getWordAtPosition(paragraph, x, y) {
                 while (wordEnd < textNode.length && /\S/.test(textNode.textContent.charAt(wordEnd))) {
                     wordEnd++;
                 }
-                // Return the node and offset representing the clicked word
+
+                const selectedText = textNode.textContent.substring(wordStart, wordEnd);
+
+                const parent = document.querySelector('#selectedWord')
+                const existingSpan = document.querySelector('#pastedWord')
+                if (existingSpan) {
+                    parent.removeChild(existingSpan)
+                }
+                
+
+                const span = document.createElement('span');
+                span.setAttribute('id', 'pastedWord')
+                span.textContent = selectedText
+                
+                // const referenceNode = parent.firstChild
+                parent.appendChild(span)
+                
                 return { node: textNode, offset: wordStart };
             }
         }
@@ -104,6 +122,11 @@ function selectText(startNode, startOffset, endNode, endOffset) {
     // Clear existing selection and add the new range
     selection.removeAllRanges();
     selection.addRange(range);
+    navigator.clipboard.writeText(selection).then(function() {
+        console.log('Copy was succesful!')
+    }, function(err) {
+        console.error('An error has occured: ' + err)
+    })
 }
 
 

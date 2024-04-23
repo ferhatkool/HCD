@@ -23,6 +23,40 @@ Het enige wat nog beter zou kunnen is het scrollen; ik heb met mevrouw getest of
 
 <img src="./readme-content/prototype-1-picture-4.png">
 
+### 17-04-2024
+Mevrouw was wederom erg enthousiast over mijn prototype. Omdat het alweer een week geleden was wilde ze graag weer het hele prototype zien, als korte opfrisser. Voor mevrouw heb ik één extra functionaliteit gemaakt, namelijk het scrollen op de pagina a.d.h.v. twee knoppen; één knop om mee naar beneden te scrollen en één knop om mee naar boven te scrollen. Elke knop zal het main element met 200pixels verplaatsen. Het leek mij handiger om dit een vaste waarde te geven, omdat het met een percentage op een hele lange pagina ervoor kan zorgen dat stukken tekst worden overgeslagen. Mevrouw vond dit erg fijn en goed werken, omdat dit precies het geen is waar zij normaal gesproken moeite mee heeft. Maar dit werkt erg goed voor mevrouw.
+
+<img src='/readme-content/prototype-2-picture-1.png'>
+
+Wat ik nog verder zou willen implementeren zijn:
+
+- Weergeven van het woord dat als eerste is geselecteerd, omdat mevrouw niet kan aanvoelen of ze wel of niet heeft geklikt. Dit kan a.d.h.v. een highlight (tekst markeren met een kleur) en/of het geselecteerde woord dik en groter maken.
+- Animaties voor tijdens het scrollen, om het was smoother te maken.
+- Ander cursor icoon wanneer de muis op de tekst staat, om de cursor duidelijker aan te geven.
+- Cursor überhaupt groter maken, misschien a.d.h.v. een knop?
+- (Optioneel) Facebook of WhatsApp knop dat het geselecteerde tekst direct opent in de desbetreffende site
+- (Optioneel) Knop om de tekst te vergroten?
+- (Optioneel) Geplakte tekst laten staan en ervoor zorgen dat er meer tekst aan kan worden toegevoegd. Hierbij zou ik dan ook een clear button bij maken, om zo met een schoon tekstvak verder te kunnen gaan.
+
+### 24-04-2024
+
+## FEEDBACKGESPREKKEN
+### 12-04-2024 (Eric)
+Vandaag had ik een gesprek met Eric over het prototype dat ik heb gemaakt voor mevrouw Besemer. Hij was erg positief over het prototype dat ik heb gemaakt en we hebben samen nagedacht over wat de perfecte oplossing zou zijn voor mevrouw Besemer, namelijk het maken van een browser extentie. De nadruk ligt hierbij dat het de perfecte oplossing ZOU kunnen zijn, aangezien het onrealistisch is voor mij om binnen twee weken een browser extentie te maken. Toch zou het een goed punt zijn om te benoemen tijdens het eindgesprek, zodat ik kan aantonen dat ik heb nagedacht over wat een betere oplossing zou zijn dan wat ik heb gemaakt. 
+
+Voor nu gaf Eric mij twee punten mee waar ik aan zou kunnen werken, namelijk scrollknoppen maken om door de pagina heen te scrollen en het mogelijk maken dat de gekopieerde tekst tussen teksten geplakt zou kunnen worden, voor als mevrouw een verhaal zou willen schrijven voor op bijvoorbeeld Facebook, bestaande uit meerdere geplakte stukken tekst of uit geschreven tekst waar een gekopieerd stuk tekst aan zou kunnen worden geplakt.
+
+### 19-04-2024 (Vasilis)
+Vasilis:
+
+- Begin selectie aangeven
+- Kopieren gelijk na het maken van de selectie i.p.v. op een knop drukken
+- Scroll animaties
+- Kijken of ik een script kan toevoegen aan de site van Gemeente Amsterdam om menu items onclick te openen i.p.v. onhover, ter demonstratie (Greasemonkey)
+
+Ignore Conventions:
+
+- Gewoon kopieren, plakken en scrollen werken niet, dus iets maken dat zich niet houdt aan de conventies
 
 ## LOGS
 ### 09-04-2024
@@ -167,3 +201,225 @@ Verder heb ik een navigatiebalk gemaakt met daarin twee dropdown menu’s die ge
 Tenslotte heb ik extra pagina’s toegevoegd als voorbeeld pagina’s. Dit zijn allemaal dezelfde pagina’s waarin een tekstveld te zien is met een plak knop daarboven. Het idee hierachter is dat mevrouw de tekst kan plakken en a.d.h.v. de spraaksoftware extra tekst kan toevoegen, zoals een kort berichtje. Het tekstveld kan ook worden beschouwd als een test functionaliteit om te laten zien dat de tekst ook op andere pagina’s kan worden geplakt. Het tekstveld schaalt mee met de inhoud.
 
 <img src="./readme-content/picture-5.png">
+
+### 16-04-2024
+Vandaag heb ik twee functies gemaakt die ervoor zorgen dat het main element 200px omhoog/omlaag wordt verplaatst. De functies worden a.d.h.v. de bijbehorende buttons uitgevoerd. De functies zien er als volgt uit:
+
+```jsx
+function scrollUp() {
+    const mainElement = document.querySelector('main');
+    mainElement.scrollTop -= 200;
+}
+
+function scrollDown() {
+    const mainElement = document.querySelector('main');
+    mainElement.scrollTop += 200;
+}
+```
+
+De knoppen zien er als volgt uit:
+<img src="./readme-content/prototype-2-picture-1.png">
+
+### 23-04-2024
+Vandaag heb ik een aantal functies van de site aangepast, namelijk:
+- Bij het selecteren van een woord zal het geselecteerde woord worden weergegeven boven de gehele tekst, om zo aan te duiden dat een woord is geselecteerd.
+- Als de muis op de tekst staat, veranderd de cursor van het default hover cursor naar een meer opvallende cursor.
+- Als de scroll knoppen worden gebruikt zal er een animatie worden afgespeeld, zodat het net lijkt alsof er naar beneden wordt gescrolled i.p.v. dat de tekst 200px omlaag verspringt.
+- De gehele navigatiebalk is tabbable, inclusief de dropdown.
+- Als er een selectie is gemaakt, zal deze gelijk worden gekopieerd i.p.v. dat er nog op een knop moet worden gedrukt om de selectie te kopieren. 
+
+Op basis van het verkregen feedback van mevrouw Besemer en Vasilis heb ik de functionaliteit voor het zichtbaarmaken van een geselecteerd woord toegevoegd. Mevrouw Besemer vond het bij het testen van het prototype lastig om te zien of ze nou wel of niet een woord had geselecteerd. Vasilis gaf eigenlijk dezelfde feedback aan mij terug tijdens het afgelopen feedback gesprek, evenals Eric bij het feedback gesprek dat weer daarvoor had plaatst gevonden. Om deze reden heb ik nagedacht om een geselecteerd woord zichtbaar te maken. 
+
+Het volgende stuk script is toegevoegd aan de functie 'getWordAtPosition' in selection.js.
+```jsx
+const selectedText = textNode.textContent.substring(wordStart, wordEnd);
+
+const parent = document.querySelector('#selectedWord')
+const existingSpan = document.querySelector('#pastedWord')
+if (existingSpan) {
+    parent.removeChild(existingSpan)
+}
+                
+const span = document.createElement('span');
+span.setAttribute('id', 'pastedWord')
+span.textContent = selectedText
+                
+// const referenceNode = parent.firstChild
+parent.appendChild(span)
+```
+
+Het volgende stuk css code is toegevoegd aan style.css.
+```css
+#selectedWord span {
+    font-family: var(--text);
+    letter-spacing: 0.8px; 
+}
+
+#selectedWord span:nth-of-type(2) {
+    background-color: darkorange;
+    border: 1px solid black;
+    padding: 5px;
+}
+```
+
+<img src='./readme-content/picture-6.png'>
+
+Hetzelfde geldt eigenlijk voor de zichtbaarheid van de cursor wanneer deze op de tekst staat. Standaard is dit een 'staafje' die erg dun is en dezelfde kleur heeft als de tekst, wat het voor mevrouw Besemer onmogelijk maakt om deze te zien. Ik heb er voor gekozen om cursor te gebruiken dat meer opvalt, eentje die groter is en niet dezelfde kleur heeft als de tekst. 
+
+```css
+#test:hover {
+    cursor:grab;
+}
+```
+
+<img src='./readme-content/picture-7.png'>
+
+Vasilis had als feedback punt gegeven dat ik beter een animatie kon gebruiken voor de scroll knoppen, omdat het er een beetje gekkig uitziet dat de tekst gelijk 200px verspringt. Hiervoor heb ik een animatie gemaakt dat de scroll-behaviour veranderd naar smooth. De animatie duurt .5 seconden. Het omhoog en omlaag laten gaan van de tekst wordt nog wel door JavaScript geregeld. Ook heb ik toegevoegd dat er tijdens de scroll animatie geen clicks kunnen plaats vinden, om complicaties met de animatie te voorkomen.
+
+De functie voor de scroll knoppen ziet er nu als volgt uit.
+
+```jsx
+function scrollUp() {
+  const mainElement = document.querySelector('main');
+  const bodyElement = document.querySelector('body')
+  
+  // Add a class to main element to trigger the scroll up animation
+  mainElement.classList.add('animating', 'scroll-up');
+  bodyElement.classList.add('animating')
+  
+  // Scroll up after a short delay to allow animation to start
+  setTimeout(() => {
+      mainElement.scrollTop -= 200; // Scroll up by 200px
+  }, 50); // Adjust the delay as needed
+  
+  // Remove the animation class after animation completes
+  setTimeout(() => {
+      mainElement.classList.remove('animating', 'scroll-up');
+      bodyElement.classList.remove('animating')
+  }, 500); // Adjust the delay to match the animation duration
+}
+
+function scrollDown() {
+  const mainElement = document.querySelector('main');
+  const bodyElement = document.querySelector('body')
+  
+  // Add a class to main element to trigger the scroll down animation
+  mainElement.classList.add('animating', 'scroll-down');
+  bodyElement.classList.add('animating')
+  
+  // Scroll down after a short delay to allow animation to start
+  setTimeout(() => {
+      mainElement.scrollTop += 200; // Scroll down by 200px
+  }, 50); // Adjust the delay as needed
+  
+  // Remove the animation class after animation completes
+  setTimeout(() => {
+      mainElement.classList.remove('animating', 'scroll-down');
+      bodyElement.classList.remove('animating')
+  }, 500); // Adjust the delay to match the animation duration
+}
+```
+
+```css
+/* Define the scroll up animation */
+@keyframes scrollUpAnimation {
+    from {
+        scroll-behavior: smooth;
+    }
+    to {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Define the scroll down animation */
+@keyframes scrollDownAnimation {
+    from {
+        scroll-behavior: smooth;
+    }
+    to {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Apply the animation to the main element during scrolling up */
+main.animating.scroll-up {
+    animation: scrollUpAnimation 0.5s ease forwards;
+}
+
+/* Apply the animation to the main element during scrolling down */
+main.animating.scroll-down {
+    animation: scrollDownAnimation 0.5s ease forwards;
+}
+
+/* Disable pointer events during animation to prevent user interaction */
+main.animating {
+    pointer-events: none;
+}
+
+body.animating {
+    pointer-events: none
+}
+```
+
+Om de toegankelijkheid van de site te verhogen heb ik ervoor gekozen om de gehele navigatiebalk tabbable te maken, zodat mevrouw Besemer daar gebruik van kan maken. Met de navigatiebalk die ik oorspronkelijk had kon er wel doorheen worden getabbed, maar niet door de navigatie items die een dropdown menu bevatten. Ik heb kleine aanpassingen verricht aan de navigatiebalk om de items die een dropdown menu bevatten toch tabbable te maken.
+
+Het volgende stuk script is toegevoegd aan dropdown.js en zorgt er als het ware voor dat als het navigatie item met de dropdown menu in focus is, de functie voor het openklappen van het dropdown menu wordt uitgevoerd. De const die eronder staat zorgt ervoor dat er tijdens het tabben na het laatste menu item, het dropdown menu wordt gesloten en het tabben verder gaat in de navigatiebalk of de volgende dropdown menu. Aan de dropdown menu's heb ik een tabindex toegevoegd, zodat deze worden meegenomen tijdens het tabben.
+
+```jsx
+// Listen for focus event on li items
+const dropdownItems = document.querySelectorAll('.menuItemButton');
+dropdownItems.forEach(item => {
+    item.addEventListener('focus', (event) => {
+        const attribute = event.target.attributes[1].value.toString();
+        const character = attribute.charAt(14);
+        openMenuItem(character);
+    });
+});
+
+// Listen for keydown event on the last item of the dropdown menu
+const dropdownMenus = document.querySelectorAll('.dropdown');
+dropdownMenus.forEach(menu => {
+    const menuItems = menu.querySelectorAll('li');
+    const lastMenuItem = menuItems[menuItems.length - 1];
+    lastMenuItem.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab' && !event.shiftKey) {
+            closeMenu();
+        }
+    });
+});
+```
+
+```html
+<nav role="navigation" class="primary-navigation">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li tabindex="0" onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1 &dtrif;</a>
+            <ul id="menuItem1" class="dropdown">
+                <li><a href="./example-1.html">Voorbeeld 1</a></li>
+                <li><a href="./example-2.html">Voorbeeld 2</a></li>
+            </ul>
+        </li>
+        <li tabindex="0" onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2 &dtrif;</a>
+            <ul id="menuItem2" class="dropdown">
+                <li><a href="./example-3.html">Voorbeeld 3</a></li>
+                <li><a href="./example-4.html">Voorbeeld 4</a></li>
+                <li><a href="./example-5.html">Voorbeeld 5</a></li>
+            </ul>
+        </li>
+        <li><a href="/">Menu Item 3</a></li>
+        <li><a href="/">Menu Item 4</a></li>
+    </ul>    
+</nav>
+```
+
+Tenslotte heb ik op basis van de meest recente test met mevrouw Besemer en feedback van Vasilis ervoor gekozen om een selectie direct naar het klembord te kopieren i.p.v. dat er op een knop moet worden gedrukt om de selectie te kopieren. Ik merkte bij de meest recente test met mevrouw Besemer dat ze nog wel eens misklikt, wat ervoor zorgt dat de selectie verdwijnt. Nou had ik ook een functie kunnen toevoegen dat de selectie zou blijven staan, maar dat zorgt ervoor dat mevrouw niet opnieuw kan beginnen met de selectie wanneer zij bijvoorbeeld de verkeerde woorden heeft geselecteerd. Het leek Vasilis zelf handiger als de selectie direct naar het klembord zou worden gekopieerd, omdat je eigenlijk zo min mogelijk acties wilt uitvoeren op een site om een bepaald resultaat te bereiken.
+
+Het volgende stuk JavaScript is toegevoegd aan de functie 'selectText' in selection.js
+```jsx
+    navigator.clipboard.writeText(selection).then(function() {
+        console.log('Copy was succesful!')
+    }, function(err) {
+        console.error('An error has occured: ' + err)
+    })
+```
+

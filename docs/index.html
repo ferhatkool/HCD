@@ -12,18 +12,28 @@
     </head>
     <body>
         <header>
-
+            <button class="buttonStyling" onclick="scrollUp()">Scroll naar boven</button>
+            <button class="buttonStyling" onclick="scrollDown()">Scroll naar beneden</button>
+            
         </header>
 
         <main>
             <h1>Prototype</h1>
             <p>Dit is een webpagina dat dient als prototype voor de opdracht van het vak HCD, waarbij een technische oplossing wordt gerealiseerd voor mevrouw Besemer.</p>
             <p>Hieronder is een lap tekst dat als voorbeeld wordt gebruikt voor de kopieer/plak functie.</p>
+            <p>De tekst wordt automatisch gekopieerd naar het klembord wanneer er een beginwoord en eindwoord is aangeklikt.</p>
 
             <h2>Voorbeeld</h2>
-            <button onclick="copySelection()">Copy</button>
+            <!-- <button onclick="copySelection()">Copy</button> -->
             <button onclick="pasteSelection()">Paste</button>
+            
             <p id="pastedText"></p>
+            <section id="selectedWord">
+                <span>
+                    Geselecteerd woord: 
+                </span>
+                
+            </section>
             <section id="test">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris nec fringilla turpis, ac pharetra massa. Curabitur libero mi, facilisis blandit vestibulum sed, pulvinar sit amet ante. Maecenas interdum neque a tortor bibendum, eget commodo odio vestibulum. Morbi id varius massa. Vestibulum quis neque tellus. Aliquam non risus gravida, volutpat purus at, pellentesque libero. Cras suscipit gravida dolor. Duis ut velit consectetur sapien porta maximus mollis ac purus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus molestie molestie turpis, ut viverra justo auctor eget. Pellentesque in ante eget urna placerat sodales quis ut sapien. Fusce a enim ut quam posuere venenatis at fermentum erat.</p>
 
@@ -66,13 +76,13 @@
             <nav role="navigation" class="primary-navigation">
                 <ul>
                     <li><a href="/">Home</a></li>
-                    <li onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1 &dtrif;</a>
+                    <li tabindex="0" onclick="openMenuItem('1')" class="menuItemButton"><a>Menu Item 1 &dtrif;</a>
                         <ul id="menuItem1" class="dropdown">
                             <li><a href="./example-1.html">Voorbeeld 1</a></li>
                             <li><a href="./example-2.html">Voorbeeld 2</a></li>
                         </ul>
                     </li>
-                    <li onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2 &dtrif;</a>
+                    <li tabindex="0" onclick="openMenuItem('2')" class="menuItemButton"><a>Menu Item 2 &dtrif;</a>
                         <ul id="menuItem2" class="dropdown">
                             <li><a href="./example-3.html">Voorbeeld 3</a></li>
                             <li><a href="./example-4.html">Voorbeeld 4</a></li>
@@ -88,6 +98,7 @@
             <script src="./assets/js/selection.js"></script>
             <script src="./assets/js/dropdown.js"></script>
             <script src="./assets/js/copy-paste.js"></script>
+            <script src="./assets/js/scroll.js"></script>
         </footer>
     </body>
 </html>

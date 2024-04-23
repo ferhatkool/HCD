@@ -20,7 +20,6 @@ function pasteSelection() {
     navigator.clipboard.readText().then(text => {
         // retrieve the placeholder for the text and place the item of the clipboard on the placeholder.
         const paragraph = document.getElementById('pastedText')
-        console.log(paragraph.tagName)
         if (paragraph.tagName == 'P') {
             paragraph.innerHTML = text
         } else if (paragraph.tagName == 'INPUT') {

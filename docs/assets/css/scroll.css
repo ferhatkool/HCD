@@ -22,3 +22,42 @@ main::-webkit-scrollbar-thumb:hover {
     background: #555;
     border-radius: 5px;
 }
+
+/* Define the scroll up animation */
+@keyframes scrollUpAnimation {
+    from {
+        scroll-behavior: smooth;
+    }
+    to {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Define the scroll down animation */
+@keyframes scrollDownAnimation {
+    from {
+        scroll-behavior: smooth;
+    }
+    to {
+        scroll-behavior: smooth;
+    }
+}
+
+/* Apply the animation to the main element during scrolling up */
+main.animating.scroll-up {
+    animation: scrollUpAnimation 0.5s ease forwards;
+}
+
+/* Apply the animation to the main element during scrolling down */
+main.animating.scroll-down {
+    animation: scrollDownAnimation 0.5s ease forwards;
+}
+
+/* Disable pointer events during animation to prevent user interaction */
+main.animating {
+    pointer-events: none;
+}
+
+body.animating {
+    pointer-events: none
+}
