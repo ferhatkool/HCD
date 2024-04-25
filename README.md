@@ -7,7 +7,7 @@ De punten waar mevrouw tegenaanloopt staan hieronder concreet beschreven:
 - Het juiste woord selecteren lukt meestal niet, omdat zij niet met precisie op het eerste letter van een woord kan klikken.
 - Tekst kopiëren en plakken is niet mogelijk, omdat zij geen shortcuts op haar toetsenbord kan gebruiken en omdat zij geen rechtermuisklik kan doen.
 - Menubalken met dropdowns die on-hover openklappen zijn voor mevrouw onmogelijk om te gebruiken, omdat haar tekentablet clicks doen i.p.v. vegen.
-- 
+- Kleine knoppen zijn lastig aan te klikken, doordat mevrouw niet heel precies/gericht ergens op kan klikken, omdat zij hier simpelweg geen gevoel bij heeft.
 
 ### Functionaliteiten in het prototype
 Voor mevrouw heb ik een prototype gemaakt waarin functionaliteiten zijn verwerkt om de problemen waar ze normaal gesproken tegen aanloopt te verhelpen. Dit is een simpele site met de volgende functionaliteiten:
