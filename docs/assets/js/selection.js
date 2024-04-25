@@ -48,6 +48,9 @@ sectionToSelect.addEventListener('click', function(event) {
     }
 });
 
+let tempParagraph;
+// let clickedWord = false
+
 // Function to retrieve the word at a clicked position within a paragraph
 function getWordAtPosition(paragraph, x, y) {
     // Create a range to work with
@@ -90,6 +93,37 @@ function getWordAtPosition(paragraph, x, y) {
                 
                 // const referenceNode = parent.firstChild
                 parent.appendChild(span)
+
+                // if (clickedWord == false) {
+                    // const parent = document.querySelector('#selectedWord')
+                    // const existingSpan = document.querySelector('#pastedWord')
+                    // if (existingSpan) {
+                    //     parent.removeChild(existingSpan)
+                    // }
+                    
+    
+                //     const span = document.createElement('span');
+                //     span.setAttribute('id', 'pastedWord')
+                //     span.textContent = selectedText
+                    
+                //     // // const referenceNode = parent.firstChild
+                //     // parent.appendChild(span)
+                //     tempParagraph = textNode.textContent
+                //     const paragraphText = textNode.textContent;
+    
+                //     const newParagraph = document.createElement('p')
+                //     newParagraph.innerHTML = paragraphText.slice(0, wordStart) + "<span>" + selectedText + "</span>" + paragraphText.slice(wordEnd)
+                //     console.log(newParagraph)
+                //     // const newTextStart = paragraphText.slice(0, wordStart);
+                //     // const newTextEnd = paragraphText.slice(wordEnd)
+    
+                //     textNode.parentNode.replaceChild(newParagraph, textNode);
+
+                //     clickedWord = true
+                // }
+                
+
+                // console.log(newText)
                 
                 return { node: textNode, offset: wordStart };
             }

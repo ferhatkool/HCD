@@ -1,6 +1,48 @@
 # HCD
+### Introductie tot de opdracht.
+Voor het vak Human Centered Design (HCD) heb ik een product moeten maken waarbij één gebruiker centraal staat. De gebruiker waar ik het product voor heb gemaakt is voor mevrouw Besemer. Mevrouw Besemer heeft al langer dan 35 jaar last van een neurologische ziekte die ervoor heeft gezorgd dat de doorgeef kernen van de zenuwen kapot zijn. Hiervoor kan mevrouw haar vingers niet goed bewegen, wat resulteert in dat mevrouw niet goed gebruik kan maken van websites. Ze maakt gebruik van zowel spraaksoftware (Dragon) als een tekentablet (Wakom). De spraaksoftware gebruikt ze voornamelijk om teksten te typen en de tekentablet voor het navigeren op haar laptop en websites. Voor het product is alleen het gebruik maken van de tekentablet verbeterd, omdat ze daar tegen belangrijke problemen aanliep, zoals het selecteren van tekst. Mevrouw kan haar vingers niet goed bewegen en ze houdt eigenlijk de pen van de tekentablet vast met heel de hand, waardoor het voor haar vrijwel onmogelijk is om de pen te verslepen terwijl ze een knop op de pen ingedrukt houdt. Hierdoor kan zij geen tekst selecteren, wat zij wel erg belangrijk vind. 
 
-## CONCEPTEN
+De punten waar mevrouw tegenaanloopt staan hieronder concreet beschreven:
+- Tekst selecteren is vrijwel niet mogelijk, doordat mevrouw niet kan slepen met de pen terwijl ze een knop ingedrukt houdt.
+- Het juiste woord selecteren lukt meestal niet, omdat zij niet met precisie op het eerste letter van een woord kan klikken.
+- Tekst kopiëren en plakken is niet mogelijk, omdat zij geen shortcuts op haar toetsenbord kan gebruiken en omdat zij geen rechtermuisklik kan doen.
+- Menubalken met dropdowns die on-hover openklappen zijn voor mevrouw onmogelijk om te gebruiken, omdat haar tekentablet clicks doen i.p.v. vegen.
+- 
+
+### Functionaliteiten in het prototype
+Voor mevrouw heb ik een prototype gemaakt waarin functionaliteiten zijn verwerkt om de problemen waar ze normaal gesproken tegen aanloopt te verhelpen. Dit is een simpele site met de volgende functionaliteiten:
+- Menubalk met dropdowns die on-click open klappen. De dropdowns klappen ook open als er met de tab-toets door de site wordt geklikt, wat het mogelijk maakt dat spraaksoftware de dropdowns kan openklappen.
+- Voorbeeldtekst waarbij een selectie kan worden gemaakt door op een startpositie en eindpositie te klikken. Dit gaat niet per letter, maar per woord, zodat mevrouw met minder precisie hoeft te klikken.
+- Twee knoppen waarmee omhoog en omlaag kan worden 'gescrolled'.
+- Andere cursor die zichtbaarder is wanneer de cursor over tekst zweeft. 
+
+### Resultaat van het prototype.
+Mevrouw was heel erg tevreden over het prototype, omdat zij prima gebruik kan maken van de extra functionaliteiten. Het lukt haar nu om een selectie van tekst te maken en deze te kopieren en te plakken. Ook vind mevrouw het erg fijn dat ze nu zelf door een pagina kan scrollen a.d.h.v. knoppen. Op één punt na was mevrouw dolgelukkig over het prototype en zou het iets zijn wat ze prima zou kunnen gebruiken. Het punt wat nog wel beter zou kunnen is het tonen dat er een startwoord is aangeklikt om een selectie mee te maken. Voor nu had ik bovenaan de voorbeeld tekst een vakje gemaakt waar staat 'Geselecteerd woord: ' met waarachter het geselecteerde woord. Het probleem hierbij is dat het vakje niet meer zichtbaar is als er naar beneden wordt gescrolled. Hier heb ik wel al twee ideeën voor bedacht, waarvan ik de beste had willen implementeren, mits er meer tijd over was. 
+
+<img src='./readme-content/picture-8.png'>
+
+### Wat had ik nog willen implementeren?
+Een geselecteerd woord zou ik op twee manieren kunnen weergeven; het woord zelf highlighten door deze bijvoorbeeld dikgedrukt te maken of door een andere achtergrondkleur met omlijning toe te passen op het woord, of door een zwevend vakje te maken dat met de pagina meegaat waarin het geselecteerde woord wordt weergeven. Naar mijn mening, en dat heb ik ook bij andere studenten geöbserveerd, zou het highlighten van een woord de beste oplossing zijn. 
+
+## Design principles
+Als reflectie voor de opdracht heb ik gereflecteerd op de toegepaste design principles in het prototype. De design principles in kwetstie zijn:
+- Study situation
+- Ignore Conventions
+- Prioritse Identity
+- Add Nonsense
+
+### Study situation
+
+
+### Ignore Conventions
+
+
+### Prioritse Identity
+
+
+### Add Nonsense
+
+
 
 ## PROTOTYPES
 ### 11-04-2024
@@ -39,6 +81,11 @@ Wat ik nog verder zou willen implementeren zijn:
 - (Optioneel) Geplakte tekst laten staan en ervoor zorgen dat er meer tekst aan kan worden toegevoegd. Hierbij zou ik dan ook een clear button bij maken, om zo met een schoon tekstvak verder te kunnen gaan.
 
 ### 24-04-2024
+Ik heb aan mevrouw twee nieuwe 'functies' laten zien; het weergeven van een woord als erop geklikt is en het smooth laten scrollen van de tekst. De functie voor het automatisch kopieren heb ik ook in dit prototype gebruikt, maar dat spreekt voor zich, dat hoeft niet getest te worden, want dat werkt gewoon. Voor het weergeven van een woord heb ik twee verschillende opties. Een woord wordt bovenaan getoond naast 'Geselecteerd woord: ' of een woord wordt in de tekst gehighlight. 
+
+De eerste optie had ik al afgemaakt en ik was benieuwd of mevrouw het fijn vond werken. Zelf was ik er al achtergekomen dat het een onhandige optie is, omdat dit vast bovenaan in de pagina staat en niet zichtbaar is wanneer er naar beneden is gescrolled. Mevrouw was het hier ook mee eens. Vervolgens liet ik mevrouw de andere optie zien, die ik helaas nog niet af had en dat is het highlighten van de tekst. Mevrouw vond dit erg duidelijk en zou liever deze optie willen gebruiken. 
+
+Tenslotte liet ik mevrouw het smooth scrollen van de scroll knoppen zien en die vond ze erg fijn. Ze vond het beter dan dat de tekst plots naar beneden schuift, omdat de tekst nu met een animatie naar beneden wordt geschoven en mevrouw kan volgen waar ze nog was in de tekst. Aangezien dit de laatste test was, gaf mevrouw ook de opmerking dat als ze me had mogen beoordelen, ze me een hoog cijfer zou geven. Dat was natuurlijk erg leuk om te horen.
 
 ## FEEDBACKGESPREKKEN
 ### 12-04-2024 (Eric)
