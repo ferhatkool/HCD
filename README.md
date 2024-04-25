@@ -32,16 +32,21 @@ Als reflectie voor de opdracht heb ik gereflecteerd op de toegepaste design prin
 - Add Nonsense
 
 ### Study situation
+De situatie van mevrouw Besemer is groot en deels al beschreven in de introductie, maar kort gezegd, mevrouw Besemer kan alleen gebruik maken van een tekentablet vanwege haar neurologische ziekte. Ze kan alleen enkele vingers enigzins bewegen, wat het voor haar wel mogelijk maakt om een pen te gebruiken van een tekentablet, maar ze kan geen gebruik maken van een muis of toetsenbord. Spraaksoftware kan ze ook enigzins gebruiken, maar dat vind ze toch niet zo prettig. Hierdoor kan zij websites niet gebruiken zoals zij dat wilt. Zij wilt namelijk vaak stukken tekst die ze interessant vind kopieren, om deze vervolgens naar haar kleinzoon te sturen of te delen op haar Facebook pagina. Ook is het scrollen op websites voor haar erg lastig en heeft ze soms moeite met het gebruik maken van navigatiebalk als deze dropdown menu's bevat die on-hover open klappen.
 
 
 ### Ignore Conventions
-
+Om haar problemen met het gebruik maken van websites op te lossen moeten enkele conventies worden genegeerd. Zo moet er een alternatieve manier worden bedacht voor het scrollen en het selecteren, kopieren en plakken van tekst, wat normaal gesproken prima kan met een muis en/of toetsenbord. Enkele voorbeelden:
+- Het gebruik maken van scrollknoppen is in de meeste gevallen onnodig, omdat iemand die gebruik maakt van een muis en/of toetsenbord prima kan scrollen met de pijltjestoetsen of met het scrollwiel van een muis. Voor de meeste mensen zouden de scrollknoppen ook eerder een last zijn, omdat deze in de weg zou kunnen zitten. Maar voor iemand die niks anders kan gebruiken dan een stylus van een tekentablet komt een zichtbare knop op het scherm goed van pas. 
+- Het selecteren van tekst kan normaal gesproken met een muis door de linkermuisknop ingedrukt te houden tijdens het slepen van de muis. Maar, omdat mevrouw geen muis kan gebruiken, moet er op een toch soort van omslachtige manier een selectie kunnen worden gemaakt zonder iets te slepen. Naar mijn mening is het aanklikken van een startwoord en een eindwoord de perfecte oplossing, omdat mevrouw simpelweg op de woorden kan klikken en alles wat daar tussenin zit wordt geselecteerd. Het nadeel hiervan is dat als mevrouw perongeluk het verkeerde woord aanklikt, ze met deze methode niet zo snel een nieuwe selectie kan maken als dat iemand dat zou kunnen doen die gebruik maakt van een muis. Toch vind ik zelf dat, ondanks dat dit niet volgens de conventies is, dit een functionaliteit is dat door iedereen gebruikt zou kunnen worden.
+- Het kopieren en plakken van tekst ging in het eerste prototype d.m.v. een kopieerknop en een plakknop. De kopieer knop heb ik weggehaald, omdat ik merkte dat het klikken op knoppen mevrouw niet altijd even goed af ging en de selectie verdween als ze naast te knop klikte. Ook adviseerde Vasilis mij om zo min mogelijk knoppen te gebruiken, maar deze alleen te gebruiken waar het echt nodig is, zoals voor het plakken. Het kopieren gaat nu automatisch als mevrouw een selectie heeft gemaakt, wat ook niet volgens de conventies is.
+- Normaal gesproken heeft een site geen kopieer en plak knop, maar als een site dit wel heeft zijn deze vaak aan de kleine kant. Het is voor mevrouw Besemer erg lastig om op kleine knoppen te drukken, omdat zij niet heel precies ergens op kan klikken. Om deze reden heb ik de knoppen redelijk groot gemaakt en kunnen deze storend zijn voor een normale gebruiker, omdat het wel wat ruimte in beslag neemt.
 
 ### Prioritse Identity
-
+De identiteit van mevrouw Besemer is erg terug te vinden in het prototype, juist omdat de oplossingen voor haar probleem echt geschikt zijn voor iemand die alleen gebruik kan maken van een stylus van een tekentablet. Verder heb ik geen content of styling aan de site toegevoegd die gerelateerd zijn aan mevrouw Besemer, zoals artikelen over dieren die ze mogelijk interessant zou vinden of kleuren waar ze gek op is. Ik heb het prototype echt gelaten als een simpele prototype dat de functionaliteiten waar zij wat aan heeft aan bod brengt. 
 
 ### Add Nonsense
-
+Nonsense heb ik naar mijn mening niet echt toegevoegd aan mijn prototypes. Zoals ik in het punt hiervoor benoemde, vond ik de focus op de functionaliteit belangrijker dan de uitstraling van het prototype. Als 'out-of-the-box' idee zou ik het selecteren van de tekst toch wel meenemen als nonsense punt, omdat het best alternatief is om tekst te selecteren met een startwoord en eindwoord. Deze worden op basis van de locatie van de muisklik in de tekst geselecteerd. 
 
 
 ## PROTOTYPES
